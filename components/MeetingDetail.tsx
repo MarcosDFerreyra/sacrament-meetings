@@ -1,7 +1,7 @@
 import type { SacramentMeeting } from "@/lib/types";
 
 
-export default function CardDetail(meeting: SacramentMeeting) {
+export default function MeetingDetail({ meeting }: { meeting: SacramentMeeting }) {
     return (
         <section className="w-full max-w-3xl space-y-6 rounded-xl border border-zinc-200 bg-white p-5 shadow-sm sm:p-7">
             <div className="space-y-3 text-sm text-zinc-700">

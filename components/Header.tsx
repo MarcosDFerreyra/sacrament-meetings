@@ -6,7 +6,7 @@ export default function Header() {
     });
     
     return (
-        <header className="bg-blue-600 text-white shadow-md">
+        <header className="bg-brand text-white shadow-md">
             <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
                 <div>
                     <p className="text-2xl font-bold">Florencio Varela Ward</p>

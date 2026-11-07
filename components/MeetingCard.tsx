@@ -3,7 +3,7 @@ import type { SacramentMeeting } from "@/lib/types";
 import Link from "next/link";
 
 
-export default function MeetingCard(meeting: SacramentMeeting) {
+export default function MeetingCard({ meeting }: { meeting: SacramentMeeting }) {
     return (
         <Link
             href={`/meetings/${meeting.id}`}
