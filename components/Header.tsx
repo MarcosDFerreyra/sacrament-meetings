@@ -1,0 +1,23 @@
+import NavLinks from './NavLinks';
+import { connection } from 'next/server';
+
+export default async function Header() {
+    await connection();
+    const today = new Date().toLocaleDateString('en-US', {
+        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+        timeZone: 'America/Argentina/Buenos_Aires'
+    });
+    
+    return (
+        <header className="bg-brand text-white shadow-md print:hidden" >
+            <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+                <div>
+                    <p className="text-2xl font-bold">Florencio Varela Ward</p>
+                    <p className="text-sm text-blue-100">{today}</p>
+                </div>
+
+                <NavLinks />
+            </div>
+        </header>
+    );
+}
