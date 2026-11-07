@@ -3,26 +3,7 @@ import type { SacramentMeeting } from './types';
 const sacramentMeetings: SacramentMeeting[] = [
     {
         id: 1,
-        date: '2026-05-03',
-        meetingType: 'regular',
-        presiding: 'Bishop Smith',
-        conducting: 'Brother Jones',
-        openingHymn: { number: 2, title: 'The Spirit of God' },
-        openingPrayer: 'Sister Williams',
-        wardBusiness: [{ description: 'Sustaining of new Primary president' }],
-        stakeBusiness: false,
-        sacramentHymn: { number: 169, title: 'In Remembrance of Thy Suffering' },
-        speakers: [
-            { name: 'Sister Brown', topic: 'Faith in Jesus Christ', type: 'speaker' },
-            { name: 'Youth Choir', topic: '', type: 'musical-number' }
-        ],
-        closingHymn: { number: 31, title: 'O God, Our Help in Ages Past' },
-        closingPrayer: 'Brother Davis',
-        announcements: ['Ward temple night: May 10']
-    },
-    {
-        id: 2,
-        date: '2026-05-10',
+        date: '2026-10-11',
         meetingType: 'testimony',
         presiding: 'Bishop Smith',
         conducting: 'Brother Anderson',
@@ -37,8 +18,8 @@ const sacramentMeetings: SacramentMeeting[] = [
         announcements: ['Fast and testimony meeting', 'Youth activity: May 15']
     },
     {
-        id: 3,
-        date: '2026-05-17',
+        id: 2,
+        date: '2026-10-18',
         meetingType: 'stake',
         presiding: 'President Taylor',
         conducting: 'Bishop Smith',
@@ -56,9 +37,9 @@ const sacramentMeetings: SacramentMeeting[] = [
         announcements: ['Stake temple trip: June 6']
     },
     {
-        id: 4,
-        date: '2026-05-24',
-        meetingType: 'general',
+        id: 3,
+        date: '2026-10-25',
+        meetingType: 'regular',
         presiding: 'Bishop Smith',
         conducting: 'Brother Jones',
         openingHymn: { number: 27, title: 'Come, Come, Ye Saints' },
@@ -74,25 +55,43 @@ const sacramentMeetings: SacramentMeeting[] = [
         announcements: ['General conference viewing party recap']
     },
     {
-        id: 5,
-        date: '2026-05-31',
-        meetingType: 'regular',
+        id: 4,
+        date: '2026-11-01',
+        meetingType: 'testimony',
         presiding: 'Bishop Smith',
         conducting: 'Brother Anderson',
         openingHymn: { number: 249, title: 'Called to Serve' },
         openingPrayer: 'Sister Baker',
         wardBusiness: [
-            { description: 'Sustaining of new Sunday School teacher' },
-            { description: 'Farewell for missionary Elder Wilson' }
+            { description: 'Sustaining of new Sunday School teacher' }
         ],
         stakeBusiness: false,
         sacramentHymn: { number: 169, title: 'In Remembrance of Thy Suffering' },
-        speakers: [
-            { name: 'Elder Wilson', topic: 'Missionary farewell', type: 'speaker' },
-            { name: 'Ward Choir', topic: '', type: 'musical-number' }
-        ],
+        speakers: [],
         closingHymn: { number: 259, title: "Let Us All Press On" },
         closingPrayer: 'Brother Garcia',
+        announcements: ['Fast and testimony meeting', 'Missionary farewell for Elder Wilson next Sunday']
+    },
+    {
+        id: 5,
+        date: '2026-11-08',
+        meetingType: 'regular',
+        presiding: 'Bishop Smith',
+        conducting: 'Brother Jones',
+        openingHymn: { number: 2, title: 'The Spirit of God' },
+        openingPrayer: 'Sister Herrera',
+        wardBusiness: [
+            { description: 'Farewell for missionary Elder Wilson' }
+        ],
+        stakeBusiness: false,
+        sacramentHymn: { number: 172, title: 'While of These Emblems We Partake' },
+        speakers: [
+            { name: 'Sister Castro', topic: 'Gratitude', type: 'speaker' },
+            { name: 'Ward Choir', topic: '', type: 'musical-number' },
+            { name: 'Elder Wilson', topic: 'Missionary farewell', type: 'speaker' }
+        ],
+        closingHymn: { number: 31, title: 'O God, Our Help in Ages Past' },
+        closingPrayer: 'Brother Romero',
         announcements: ['Farewell luncheon after meeting']
     }
 ];
