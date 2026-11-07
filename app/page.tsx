@@ -14,6 +14,7 @@ export default function Home() {
           alt="church room, with chairs and a podium"
           width={908}
           height={542}
+          loading="eager"
         />
       </main>
     </div>
