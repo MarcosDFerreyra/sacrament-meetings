@@ -1,8 +1,11 @@
 import NavLinks from './NavLinks';
+import { connection } from 'next/server';
 
-export default function Header() {
+export default async function Header() {
+    await connection();
     const today = new Date().toLocaleDateString('en-US', {
-        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+        timeZone: 'America/Argentina/Buenos_Aires'
     });
     
     return (
