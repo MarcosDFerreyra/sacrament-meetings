@@ -2,6 +2,7 @@ import type { SacramentMeeting } from "@/lib/types";
 import { headers } from "next/headers";
 import MeetingDetail from "@/components/MeetingDetail";
 import { notFound } from "next/navigation";
+import PrintButton from "@/components/PrintButton";
 
 export default async function MeetingPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
@@ -18,8 +19,11 @@ export default async function MeetingPage({ params }: { params: Promise<{ id: st
     const meeting: SacramentMeeting = await res.json();
 
     return (
-        <div>
-            <h1>Meeting Details</h1>
+        <div className="mx-auto max-w-3xl">
+            <div className="mb-4 flex items-center justify-between gap-4">
+                <h1 className="text-2xl font-bold text-brand">Meeting Details</h1>
+                <PrintButton />
+            </div>
             <MeetingDetail meeting={meeting} />
         </div>
     );

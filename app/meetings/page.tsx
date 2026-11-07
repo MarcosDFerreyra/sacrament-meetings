@@ -14,8 +14,8 @@ export default async function MeetingsPage() {
     const meetings: SacramentMeeting[] = await res.json();
 
     return (
-        <div>
-            <h1>All Meetings</h1>
+        <div className="space-y-3">
+            <h1 className="text-3xl font-bold text-brand mb-4">All Meetings</h1>
             {meetings.map((meeting) => (
                 <MeetingCard key={meeting.id} meeting={meeting} />
             ))}

@@ -3,7 +3,7 @@ import type { SacramentMeeting } from "@/lib/types";
 
 export default function MeetingDetail({ meeting }: { meeting: SacramentMeeting }) {
     return (
-        <section className="w-full max-w-3xl space-y-6 rounded-xl border border-zinc-200 bg-white p-5 shadow-sm sm:p-7">
+        <section className="mx-auto w-full max-w-3xl space-y-6 rounded-xl border border-zinc-200 bg-white p-5 shadow-sm sm:p-7">
             <div className="space-y-3 text-sm text-zinc-700">
                 <p><span className="font-semibold text-zinc-950">Type:</span> <span className="capitalize">{meeting.meetingType}</span></p>
                 <p><span className="font-semibold text-zinc-950">Date:</span> {meeting.date}</p>
