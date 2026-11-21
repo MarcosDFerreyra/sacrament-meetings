@@ -1,18 +1,14 @@
-import type { SacramentMeeting } from "@/lib/types";
-import { headers } from "next/headers";
+
 import MeetingCard from "@/components/MeetingCard";
+import { getMeetings } from "@/lib/meeting-db";
 
-export default async function MeetingsPage() {
-    
-    const headersList = await headers();
-    const host = headersList.get("host");
-    const protocol = host?.startsWith("localhost") ? "http" : "https";
-    const baseUrl = `${protocol}://${host}`;
+export default async function MeetingsPage(props: { searchParams?: Promise<{ query?: string; page?: string }>}) {
 
-    const res = await fetch(`${baseUrl}/api/meetings`);
+    const searchParams = await props.searchParams;
+    const query = searchParams?.query || "";
+    const currentPage = Number(searchParams?.page) || 1;
 
-    const meetings: SacramentMeeting[] = await res.json();
-
+    const meetings  = await getMeetings(query, currentPage)
     return (
         <div className="space-y-3">
             <h1 className="text-3xl font-bold text-brand mb-4">All Meetings</h1>

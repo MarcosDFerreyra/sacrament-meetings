@@ -8,7 +8,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     if (Number.isNaN(id)) {
         return NextResponse.json({ error: 'Invalid id' }, { status: 400 });
     }
-    const meeting = getMeetingById(id)
+    const meeting = await getMeetingById(id)
     if (!meeting)
         return NextResponse.json({ error: "Meeting not found" }, { status: 404 })
     return NextResponse.json(meeting)
