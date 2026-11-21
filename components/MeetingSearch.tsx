@@ -22,7 +22,7 @@ export function MeetingSearch() {
     return (
         <input
             type="search"
-            placeholder="Search projects..."
+            placeholder="Search meetings..."
             defaultValue={searchParams.get("query")?.toString()}
             onChange={(e) => handleSearch(e.target.value)}
             aria-label ="search meetings"
