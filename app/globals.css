@@ -1,26 +1,21 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Site colors. Tailwind creates classes from each one:
+   --color-brand  ->  bg-brand, text-brand, border-brand... */
+@theme {
+  --color-brand: #1e3a8a;
+  /* dark blue: header, buttons */
+  --color-brand-light: #dbeafe;
+  /* light blue: highlights */
+  --color-ink: #1f2937;
+  /* main text */
+  --color-muted: #4b5563;
+  /* secondary text */
+  --color-page: #ffffff;
+  /* page background */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-page);
+  color: var(--color-ink);
 }
