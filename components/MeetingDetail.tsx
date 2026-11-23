@@ -1,9 +1,15 @@
 import type { SacramentMeeting } from "@/lib/types";
-
+import Link from "next/link";
+import { deleteMeeting } from "@/lib/actions";
 
 export default function MeetingDetail({ meeting }: { meeting: SacramentMeeting }) {
     return (
         <section className="mx-auto w-full max-w-3xl space-y-6 rounded-xl border border-zinc-200 bg-white p-5 shadow-sm sm:p-7">
+            <div>
+            <Link href={`/meetings/${meeting.id}/edit`} className="mt-3 mr-4 text-sm text-blue-600 hover:underline">Edit</Link>
+            </div>
+
+            
             <div className="space-y-3 text-sm text-zinc-700">
                 <p><span className="font-semibold text-zinc-950">Type:</span> <span className="capitalize">{meeting.meetingType}</span></p>
                 <p><span className="font-semibold text-zinc-950">Date:</span> {meeting.date}</p>
@@ -43,6 +49,12 @@ export default function MeetingDetail({ meeting }: { meeting: SacramentMeeting }
                     ))}
                 </ul>
             </div>
+
+            <form action={deleteMeeting.bind(null, meeting.id.toString())}>
+                <button type="submit" className="mt-3 text-sm text-red-600 hover:underline">
+                    Delete
+                </button>
+            </form>
         </section>
     )
 }
